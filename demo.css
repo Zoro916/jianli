@@ -1,0 +1,74 @@
+*{margin:0;padding:0;}
+	#wrap{width:960px;margin:0px auto;
+				background-image:url(images/bg-img.gif);overflow:hidden;position:relative;}
+	.main{width:960px;}
+	#cover{height:70px;width:960px;position:fixed;opacity:0.3;background-color:gray;z-index:0;}
+	#head{height:70px;position:fixed;width:960px;z-index:1;}
+	#logo img{margin:5px 20px;}																										
+	#logo{float:left;}
+	#head_p{float:left;}
+	.resume{text-align:center;font-size:10px;padding:10px;width:110px;}						
+	#f2e{border-bottom:1px solid black;}	
+	#nav{width:200px;float:right;margin-top:26px;}
+	#nav ul{list-style:none;}
+	#nav ul li{float:left;margin-left:10px;font-size:10px;}
+	#nav ul li a{text-decoration:none;color:black;}
+	#nav ul li a:hover{text-decoration:underline;}
+	
+	#zoro{width:150px;height:150px;margin-top:150px;margin-left:405px;}
+	#up1{width:600px;text-align:center;line-height:36px;
+			font-size:18px;margin-top:30px; margin-left:180px;border-bottom:1px solid black;}
+	#name{width:300px;margin:0 auto;}
+	#name p{font-size:12px;text-align:center;line-height:20px;margin:10px;}
+	
+	#aboutme_top{width:200px;margin-top:100px;margin-left:380px;}
+	#aboutme_top p{width:130px;margin:auto;text-align:center;line-height:50px;}
+	#up2{border-bottom:2px solid red;font-weight:bold;font-family:微软雅黑;}
+	#down2{font-size:10px;color:red;}
+	#aboutme_matter{width:700px;height:180px;border-radius:20px;background-color:#b3b3b3;
+					margin-top:30px;margin-left:130px;}
+	.introduction{width:660px;border-radius:20px;background-color:#b3b3b3;
+				padding: 20px;margin:0 auto;margin-top:30px;display: none;}
+	.myExperience{padding: 4px;line-height:20px;font-size: 14px; }
+
+	.matter{width:80px;height:80px;background-color:#b3b3b3;float:left;margin:10px 0 0 76px;}
+	.matter img{margin:10px;}
+	.matter_div{width:80px;height:80px;background-color:#b3b3b3;float:left;margin:10px 0 0 76px;}
+	.matter_div p{width:80px;text-align:center;padding:6px 0;color:white;}
+	.matter_p{border-bottom:1px solid white;}
+	
+	#skill_top{width:200px;margin-top:100px;margin-left:380px;}
+	#skill_top p{width:130px;margin:auto;text-align:center;line-height:50px;}
+	#up3{border-bottom:2px solid red;font-weight:bold;font-family:微软雅黑;}
+	#down3{font-size:10px;color:red;}
+	#skill_plan{width:700px;height:180px;border-radius:20px;background-color:#b3b3b3;
+									margin-top:30px;margin-left:130px;}
+	.plan{width:87px;height:100px;background-color:#b3b3b3;float:left;margin:10px 0 0 109px;}
+	.plan_div{width:87px;background-color:#b3b3b3;float:left;margin:10px 0 0 109px;}
+	.plan_div p{width:87px;text-align:center;padding:6px 0;color:white;}
+	
+	#demo_top{width:200px;margin-top:100px;margin-left:380px;}
+	#demo_top p{width:130px;margin:auto;text-align:center;line-height:50px;}
+	#up4{border-bottom:2px solid red;font-weight:bold;font-family:微软雅黑;}
+	#down4{font-size:10px;color:red;}
+	#demo_digest{width:700px;height:180px;border-radius:20px;background-color:#b3b3b3;
+									margin-top:30px;margin-left:130px;}
+	.digest{width:80px;height:80px;background-color:#b3b3b3;float:left;margin:10px 0 0 76px;}
+	.digest img{margin:10px;}
+	.digest_div{width:80px;height:80px;background-color:#b3b3b3;float:left;margin:10px 0 0 76px;}
+	.digest_div p{width:80px;text-align:center;padding:6px 0;color:white;}
+	
+	#callingcard_top{width:200px;margin-top:100px;margin-left:380px;}
+	#callingcard_top p{width:130px;margin:auto;text-align:center;line-height:50px;}
+	#up5{border-bottom:2px solid red;font-weight:bold;font-family:微软雅黑;}
+	#down5{font-size:10px;color:red;}
+	#callingcard table{margin:20px auto;text-align:left;}
+	.type{font-size:14px;padding-right:15px;font-weight:bold;font-family:微软雅黑;text-align:left;}}
+	.tx{font-size:10px;font-family:宋体;}
+	
+	#footer{border-top:1px solid #b3b3b3;background-image:url(images/footer.png);}
+	#footer_list{list-style:none;margin:8px 330px;text-align:center;}
+	.item{font-size:10px;display:inline;}
+	.item a{text-decoration:none;color:black;}
+	.item a:hover{text-decoration:underline;}
+	#footer p{text-align:center;margin:8px auto;font-size:6px;}

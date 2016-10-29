@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拼图小游戏(抄袭)</title>
+	<link rel="icon" href="game.ico" type="image/x-icon"/>
+    <script src="jquery-3.0.0/jquery-3.0.0.js"></script>
+    <style>
+        .box{width: 1000px; margin:5px auto;}
+        p{width: 300px;display:inline-block;}
+        p img{ width: 200px;height: 200px;display: block}
+        p input{width: 200px;height: 50px;margin: 5px;}
+        ul{width: 684px;height: 684px;float: right}
+        li{display:inline-block;width: 170px;height: 170px;background-image: url("photos.jpg ") ;margin: 0;float: left;border: 1px black solid;}
+    </style>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="box">
+    <p>
+        <img src="photos.jpg" />
+        <input type="button" value="开始游戏" id="inp1">
+        <input type="button" value="时间计时器"  id="inp2">
+    </p>
+    <ul id="con"></ul>
+</div>
+
+<script>
+    var str='';
+    var c;
+    var  t;
+    var arr= new Array;
+    for(i=0;i<16;i++){
+        str+="<li></li>";
+    }
+    $("#con").html(str);
+    sortarr();
+    /*往ul添加16个li*/
+    for(i=0;i<16;i++) {
+        $("li:eq("+arr[i]+")").css("background-position", "-"+684/4*(arr[i]%4)+"px -"+684/4*( Math.floor(arr[i]/4))+"px");
+    };
+    $('#inp1').click(function () {
+        arr.sort(function(){return Math.random()>0.5?-1:1;});
+        clearInterval(t);
+        c=0;
+        for(i=0;i<16;i++) {
+            $("li:eq("+i+")").css("background-position", "-"+684/4*(arr[i]%4)+"px -"+684/4*( Math.floor(arr[i]/4))+"px");
+            if(arr[i]==15) {
+                $("li:eq("+i+")").css("opacity", "0");
+            }else{
+                $("li:eq("+i+")").css("opacity", "1");
+            }
+        };
+        time()
+				$('#inp1').attr('value','重新开始')
+    })
+    for(i=0;i<16;i++){
+        let  j=i;
+        var onoff=1;
+        $("li:eq("+j+")").click(function () {
+            var  onoff=1;
+           if($("li:eq("+(j+4)+")").css("opacity")=="0"){
+               $(this).css("opacity","0");
+               $("li:eq("+(j+4)+")").css({"background-position": $("li:eq("+j+")").css("background-position" ),"opacity":"1"});
+               [arr[j],arr[j+4]]=[arr[j+4],arr[j]]
+            }else if($("li:eq("+(j-4)+")").css("opacity")=="0"){
+               $(this).css("opacity","0");
+               $("li:eq("+(j-4)+")").css({"background-position": $("li:eq("+j+")").css("background-position" ),"opacity":"1"});
+               [arr[j],arr[j-4]]=[arr[j-4],arr[j]]
+           } else if($("li:eq("+(j-1)+")").css("opacity")=="0"){
+               $(this).css("opacity","0");
+               $("li:eq("+(j-1)+")").css({"background-position": $("li:eq("+j+")").css("background-position" ),"opacity":"1"});
+               [arr[j],arr[j-1]]=[arr[j-1],arr[j]]
+           }else if($("li:eq("+(j+1)+")").css("opacity")=="0"){
+               $(this).css("opacity","0");
+               $("li:eq("+(j+1)+")").css({"background-position": $("li:eq("+j+")").css("background-position" ),"opacity":"1"});
+               [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
+           }
+            for(i=0;i<16;i++){
+                if(arr[i]!=i) {
+                    onoff = 0;
+                }
+            }
+            if(onoff==1){
+                alert("胜利！总共用时"+c+"s")
+            }
+        })
+    }
+    /*点击事件*/
+    /*点击开始游戏*/
+    /**/
+    function sortarr() {
+        for(i=0;i<16;i++){
+            arr.push(i);
+        }
+        arr.sort(function(){return Math.random()>0.5?-1:1;});
+    }
+    /*计时器*/
+    function  time() {
+         c=0;
+        function va() {
+            $('#inp2').val(c);
+            c++;
+        }
+        t=setInterval(va,1000);
+    }
+</script>
+</body>
+</html>
