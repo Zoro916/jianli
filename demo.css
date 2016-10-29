@@ -62,9 +62,16 @@
 	#callingcard_top p{width:130px;margin:auto;text-align:center;line-height:50px;}
 	#up5{border-bottom:2px solid red;font-weight:bold;font-family:微软雅黑;}
 	#down5{font-size:10px;color:red;}
-	#callingcard table{margin:20px auto;text-align:left;}
-	.type{font-size:14px;padding-right:15px;font-weight:bold;font-family:微软雅黑;text-align:left;}}
-	.tx{font-size:10px;font-family:宋体;}
+
+	#callingcard_ico{width:700px;height:180px;border-radius:20px;background-color:#b3b3b3;
+					margin-top:30px;margin-left:130px;margin-bottom: 100px;}
+	.ico{width:80px;height:80px;background-color:#b3b3b3;float:left;margin:10px 0 0 76px;}
+	.ico img{margin:10px 0 0 0;}
+	.ico_div{width:80px;height:80px;background-color:#b3b3b3;float:left;margin:10px 0 0 76px;}
+	.ico_div p{width:80px;text-align:center;padding:6px 0;color:white;}
+	.ico_p{border-bottom:1px solid white;}
+	.smallFont{font-size: 6px;}
+
 	
 	#footer{border-top:1px solid #b3b3b3;background-image:url(images/footer.png);}
 	#footer_list{list-style:none;margin:8px 330px;text-align:center;}
